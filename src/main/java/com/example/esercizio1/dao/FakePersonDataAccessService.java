@@ -1,6 +1,7 @@
 package com.example.esercizio1.dao;
 
 import com.example.esercizio1.model.Person;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -10,7 +11,8 @@ import java.util.UUID;
 
 @Repository("fakeDao")
 public class FakePersonDataAccessService implements PersonDao{
-    private static List<Person> DB = new ArrayList<>();
+
+     private static List<Person> DB = new ArrayList<>();
 
     @Override
     public int insertPerson(UUID id, Person person) {
